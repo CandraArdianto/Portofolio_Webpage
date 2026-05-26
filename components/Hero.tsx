@@ -67,7 +67,7 @@ export default function Hero() {
         </p>
 
         <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-          <a href="#work" style={{
+          <a href="/candra-ardianto-portfolio.pdf" style={{
             fontSize: 13, fontWeight: 500, background: "var(--accent)", color: "#fff",
             padding: "11px 24px", borderRadius: 4, textDecoration: "none",
           }}>
