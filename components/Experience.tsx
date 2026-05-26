@@ -62,7 +62,7 @@ const jobs = [
     company: "QATROS TEKNOLOGI NUSANTARA",
     role: "Product Manager",
     period: "Sep 2019 – Apr 2021",
-    location: "Yogayakarta",
+    location: "Yogyakarta",
     industry: "Software Solution",
     color: "#4b6539",
     bullets: [
