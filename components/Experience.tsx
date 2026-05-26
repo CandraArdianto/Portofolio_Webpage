@@ -59,7 +59,7 @@ const jobs = [
     ],
   },
   {
-    company: "Qatros Teknologi Nusantara",
+    company: "QATROS TEKNOLOGI NUSANTARA",
     role: "Product Manager",
     period: "Sep 2019 – Apr 2021",
     location: "Yogayakarta",
