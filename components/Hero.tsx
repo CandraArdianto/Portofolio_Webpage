@@ -73,7 +73,7 @@ export default function Hero() {
           }}>
             View portfolio →
           </a>
-          <a href="https://linkedin.com/in/candraardianto" target="_blank" rel="noopener noreferrer" style={{
+          <a href="https://linkedin.com/in/candra-ardianto-pd" target="_blank" rel="noopener noreferrer" style={{
             fontSize: 13, fontWeight: 400, background: "transparent", color: "var(--text)",
             border: "1px solid var(--border)", padding: "11px 24px", borderRadius: 4, textDecoration: "none",
           }}>
