@@ -58,6 +58,20 @@ const jobs = [
       "Led developers as Scrum Master across Indonesia and Philippines teams",
     ],
   },
+  {
+    company: "Qatros Teknologi Nusantara",
+    role: "Product Manager",
+    period: "Sep 2019 – Apr 2021",
+    location: "Yogayakarta",
+    industry: "Software Solution",
+    color: "#4b6539",
+    bullets: [
+      "Built product architecture from zero to launch across mobile and web platforms",
+      "Processing client requirements as PRD, SRS, and the Project Timeline",
+      "Lead development team to achieve each milestone",
+      "Collaborate with QA to conduct user acceptance test",
+    ],
+  },
 ];
 
 export default function Experience() {
