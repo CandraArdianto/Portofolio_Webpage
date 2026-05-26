@@ -20,7 +20,7 @@ export default function Contact() {
             { label: "Email", val: "ardiantocandra93@gmail.com", href: "mailto:ardiantocandra93@gmail.com" },
             { label: "WhatsApp", val: "+62 812 227 222 652", href: "https://wa.me/6281227222652" },
             { label: "LinkedIn", val: "@candraardianto", href: "https://linkedin.com/in/candra-ardianto-pd" },
-            { label: "Portfolio", val: "View case studies", href: "https://bit.ly/productportfolioardiantocandra" },
+            { label: "Portfolio", val: "View case studies", href: "/candra-ardianto-portfolio.pdf" },
           ].map((item) => (
             <a key={item.label} href={item.href} target="_blank" rel="noopener noreferrer" style={{
               display: "flex", alignItems: "center", justifyContent: "space-between",
