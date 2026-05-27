@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 
 const stats = [
   { val: "5", label: "Years of product experience" },
@@ -26,15 +27,36 @@ export default function Hero() {
   return (
     <section id="work" style={{
       minHeight: "100vh",
-      padding: "9rem 2rem 5rem",
+      padding: "6rem 2rem 4rem",
       display: "grid",
-      gridTemplateColumns: "1fr 320px",
-      gap: "4rem",
+      gridTemplateColumns: "320px 1fr 260px",
+      gap: "2rem",
       alignItems: "center",
       borderBottom: "1px solid var(--border)",
-      maxWidth: 1100,
+      maxWidth: 1200,
       margin: "0 auto",
+      position: "relative",
+      zIndex: 1,
     }}>
+      <div style={{
+        position: "relative",
+        width: "100%",
+        height: 480,
+        borderRadius: "0 52px 52px 0",
+        overflow: "hidden",
+        background: "var(--card)",
+        boxShadow: "0 4px 24px rgba(0,0,0,0.06)",
+        flexShrink: 0,
+      }}>
+        <Image
+          src="/profile.webp"
+          alt="Candra Ardianto"
+          width={340}
+          height={520}
+          style={{ objectFit: "cover", objectPosition: "center top", width: "100%", height: "100%"}}
+          priority
+        />
+      </div>
       <div>
         <div style={{
           display: "inline-flex", alignItems: "center", gap: 8,

@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -23,9 +22,20 @@ export default function Navbar() {
       padding: "1rem 2rem",
       display: "flex", alignItems: "center", justifyContent: "space-between",
     }}>
-      <span style={{ fontFamily: "'Playfair Display', serif", fontSize: 18, fontWeight: 500 }}>
+      <button
+        onClick={() => window.location.href = "/"}
+        style={{
+          fontFamily: "'Playfair Display', serif",
+          fontSize: 18,
+          fontWeight: 500,
+          background: "none",
+          border: "none",
+          cursor: "pointer",
+          color: "var(--text)",
+          padding: 0,
+        }}>
         Candra Ardianto
-      </span>
+      </button>
       <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
         {links.map((l) => (
           <a key={l} href={"#" + l.toLowerCase()}

@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main>
+      <main style={{ position: "relative", zIndex: 1 }}>
         <Hero />
         <Experience />
         <Skills />
