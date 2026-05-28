@@ -47,7 +47,7 @@ const handleSubmit = async () => {
 
   return (
     <section id="contact" style={{ padding: "5rem 2rem 4rem", maxWidth: 1100, margin: "0 auto" }}>
-      <div className="contact-grid-container" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "start" }}>
+      <div className="contact-grid-container" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "end" }}>
         
         {/* Left — contact info */}
         <div>
@@ -88,7 +88,7 @@ const handleSubmit = async () => {
         </div>
 
         {/* Right — contact form */}
-        <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 8, padding: "2rem" }}>
+        <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 8, padding: "2rem", marginTop: 0 }}>
           <p style={{ fontSize: 15, fontWeight: 500, marginBottom: "1.5rem" }}>Send a message</p>
 
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
