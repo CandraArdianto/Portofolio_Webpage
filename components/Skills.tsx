@@ -52,7 +52,7 @@ export default function Skills() {
         </div>
       </div>
 
-      <div style={{ marginTop: "3rem", display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12 }}>
+      <div className="skills-grid-container" style={{ marginTop: "3rem", display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12 }}>
         {[
           { label: "Languages", items: ["Indonesian — Native", "English — Professional"] },
           { label: "Methodologies", items: ["Agile / Scrum", "Kanban", "Design Thinking"] },
@@ -69,12 +69,6 @@ export default function Skills() {
           </div>
         ))}
       </div>
-
-      <style>{`
-        @media (max-width: 640px) {
-          div[style*="repeat(3, 1fr)"] { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </section>
   );
 }

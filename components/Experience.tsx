@@ -84,7 +84,7 @@ export default function Experience() {
         <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 400 }}>Where I've shipped</h2>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "220px 1fr", gap: "2px", minHeight: 340 }}>
+      <div className="exp-grid-container" style={{ display: "grid", gridTemplateColumns: "220px 1fr", gap: "2px", minHeight: 340 }}>
         {/* Tabs */}
         <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
           {jobs.map((j, i) => (
@@ -138,12 +138,6 @@ export default function Experience() {
           </ul>
         </div>
       </div>
-
-      <style>{`
-        @media (max-width: 640px) {
-          div[style*="grid-template-columns: 220px"] { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </section>
   );
 }

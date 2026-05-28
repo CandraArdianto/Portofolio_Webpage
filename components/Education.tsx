@@ -28,7 +28,7 @@ export default function Education() {
         <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 400 }}>Academic background</h2>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: "2.5rem" }}>
+      <div className="edu-grid-container" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: "2.5rem" }}>
         {edu.map((e, i) => (
           <div key={i} style={{
             background: "var(--card)", border: "1px solid var(--border)",
@@ -63,13 +63,6 @@ export default function Education() {
           </div>
         ))}
       </div>
-
-      <style>{`
-        @media (max-width: 640px) {
-          div[style*="1fr 1fr"] { grid-template-columns: 1fr !important; }
-          div[style*="justifyContent: space-between"][style*="gap: 12"] { flex-direction: column; align-items: flex-start !important; }
-        }
-      `}</style>
     </section>
   );
 }

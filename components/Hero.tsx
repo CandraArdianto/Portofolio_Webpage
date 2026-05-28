@@ -136,12 +136,6 @@ export default function Hero() {
           </div>
         ))}
       </div>
-
-      <style>{`
-        @media (max-width: 768px) {
-          section#work { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </section>
   );
 }

@@ -19,3 +19,8 @@ body {
   font-family: 'DM Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+@media (max-width: 640px) {
+  .exp-grid-container {
+    grid-template-columns: 1fr !important;
+  }
+}
