@@ -13,7 +13,7 @@ export default function Navbar() {
 
   const links = [
     { label: "Work", href: "/#work" },
-    { label: "Portfolio", href: "/portfolio" },
+    { label: "Portfolio", href: "/candra-ardianto-portfolio.pdf" },
     { label: "Skills", href: "/#skills" },
     { label: "Education", href: "/#education" },
     { label: "Contact", href: "/#contact" },
