@@ -37,8 +37,10 @@ export default function Hero() {
       margin: "0 auto",
       position: "relative",
       zIndex: 1,
-    }}>
-      <div style={{
+    }} className="hero-section">
+      
+      {/* Profile photo — desktop: tall card, mobile: circle avatar */}
+      <div className="hero-photo-desktop" style={{
         position: "relative",
         width: "100%",
         height: 480,
@@ -46,7 +48,6 @@ export default function Hero() {
         overflow: "hidden",
         background: "var(--card)",
         boxShadow: "0 4px 24px rgba(0,0,0,0.06)",
-        flexShrink: 0,
       }}>
         <Image
           src="/profile.webp"
@@ -54,26 +55,33 @@ export default function Hero() {
           width={340}
           height={520}
           style={{ objectFit: "cover", objectPosition: "center top", width: "100%", height: "100%"}}
-          priority
+          priority={true}
         />
       </div>
-      <div>
-        <div style={{
-          display: "inline-flex", alignItems: "center", gap: 8,
-          fontSize: 12, color: "var(--accent)", background: "var(--accent-light)",
-          padding: "5px 14px", borderRadius: 20, marginBottom: "1.5rem", fontWeight: 500,
-        }}>
-          <span style={{ width: 7, height: 7, borderRadius: "50%", background: "var(--accent)", display: "inline-block" }} />
-          Open to opportunities
-        </div>
 
+      {/* Content */}
+      <div>
+        {/* Mobile avatar */}
+         <div className="hero-avatar-mobile" style={{ display: "none", marginBottom: "1.25rem" }}>
+          <div style={{
+            width: 80, height: 80, borderRadius: "50%", overflow: "hidden",
+            border: "3px solid var(--accent)", flexShrink: 0,
+          }}>
+            <Image
+              src="/profile.webp"
+              alt="Candra Ardianto"
+              width={80} height={80}
+              style={{ objectFit: "cover", objectPosition: "center top", width: "100%", height: "100%" }}
+            />
+        </div>
+      </div> 
+
+       
         <h1 ref={headRef} style={{
           fontFamily: "'Playfair Display', serif",
-          fontSize: "clamp(2.8rem, 5vw, 4.5rem)",
-          fontWeight: 500,
-          lineHeight: 1.08,
-          letterSpacing: "-0.02em",
-          marginBottom: "1rem",
+          fontSize: "clamp(2.2rem, 5vw, 4rem)",
+          fontWeight: 500, lineHeight: 1.08,
+          letterSpacing: "-0.02em", marginBottom: "1rem",
         }}>
           Product Manager<br />
           <em style={{ fontStyle: "italic", color: "var(--accent)" }}>&amp; Digital Strategist</em>
@@ -110,6 +118,7 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* Stats */}
       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
         {stats.map((s, i) => (
           <div key={i} style={{
@@ -136,6 +145,36 @@ export default function Hero() {
           </div>
         ))}
       </div>
+      
+      <style>{`
+        @media (max-width: 1024px) {
+          .hero-section {
+            grid-template-columns: 1fr 280px !important;
+          }
+          .hero-photo-desktop { display: none !important; }
+          .hero-avatar-mobile { display: flex !important; }
+        }
+        @media (max-width: 768px) {
+          .hero-section {
+            grid-template-columns: 1fr !important;
+            padding: 5rem 1.25rem 3rem !important;
+            min-height: auto !important;
+            gap: 1.5rem !important;
+          }
+          .hero-photo-desktop { display: none !important; }
+          .hero-avatar-mobile { display: flex !important; }
+          .hero-stats {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 8px !important;
+          }
+        }
+        @media (max-width: 480px) {
+          .hero-stats {
+            grid-template-columns: 1fr 1fr !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

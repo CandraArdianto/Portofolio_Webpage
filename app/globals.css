@@ -19,8 +19,70 @@ body {
   font-family: 'DM Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
-@media (max-width: 640px) {
+
+/* ══════════════════════════════
+   MOBILE RESPONSIVE
+══════════════════════════════ */
+
+@media (max-width: 768px) {
+
+  /* Experience tabs — stack vertically */
   .exp-grid-container {
     grid-template-columns: 1fr !important;
+  }
+  .exp-grid-container > div:first-child {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    gap: 4px !important;
+    padding-bottom: 4px !important;
+  }
+  .exp-grid-container > div:first-child button {
+    min-width: 140px !important;
+    border-radius: 4px !important;
+  }
+
+  /* Skills */
+  .skills-grid-container {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Education */
+  .edu-grid-container {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Contact */
+  .contact-grid-container {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    align-items: start !important;
+  }
+
+  /* General section padding */
+  section {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  /* Section headings */
+  h2 {
+    font-size: 1.8rem !important;
+  }
+
+  /* Experience detail panel */
+  .exp-grid-container > div:last-child {
+    border-radius: 8px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid-container {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Buttons wrap nicely */
+  div[style*="flexWrap: wrap"] {
+    gap: 8px !important;
   }
 }
