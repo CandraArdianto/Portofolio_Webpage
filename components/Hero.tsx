@@ -116,6 +116,14 @@ export default function Hero() {
             Download CV
           </a>
         </div>
+          <a href="https://cofibean.vercel.app/chat" target="_blank" rel="noopener noreferrer" style={{
+          fontSize: 13, fontWeight: 500, background: "transparent", color: "var(--accent)",
+          border: "1px solid var(--accent)", padding: "11px 24px", borderRadius: 4, textDecoration: "none",
+          display: "flex", alignItems: "center", gap: 6,
+        }}>
+          <img src="/Cofibean_AI-32x32.png" width={16} height={16} alt="" />
+          ☕ Cofibean AI →
+        </a>
       </div>
 
       {/* Stats */}
