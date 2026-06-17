@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     ],
     type: "website",
   },
+  verification: {
+    google: 'your-verification-code-here',
+  },
   twitter: {
     card: "summary_large_image",
     title: "Candra Ardianto — Product Manager",
